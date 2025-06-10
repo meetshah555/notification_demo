@@ -1,6 +1,6 @@
 # notification_demo
 
-A Flutter application demonstrating Firebase push notifications implementation with proper Android configuration and permissions handling.
+A Flutter application demonstrating Firebase push notifications implementation with proper Android & iOS configuration and permissions handling.
 
 ## 🚀 Features
 
