@@ -1,16 +1,86 @@
 # notification_demo
 
-Github notification demo
+A Flutter application demonstrating Firebase push notifications implementation with proper Android configuration and permissions handling.
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+- Firebase Cloud Messaging (FCM) integration
+- Local notifications support
+- Background and foreground notification handling
+- Android 13+ notification permissions
+- Proper notification channel configuration
+- OTP verification screen demo
 
-A few resources to get you started if this is your first Flutter project:
+## ⚙️ Setup Requirements
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Firebase Configuration
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project uses **FlutterFire CLI** for Firebase configuration. You'll need to set up your own Firebase project and generate the required configuration files.
+
+### Missing Configuration Files
+
+This repository **does not include** the following Firebase configuration files (you need to generate these for your own project):
+
+- `firebase.json`
+- `lib/firebase_options.dart`
+- `android/app/google-services.json`
+- `ios/Runner/GoogleService-Info.plist`
+- `ios/Podfile.lock`
+
+### Getting Started
+
+1. **Install FlutterFire CLI:**
+   ```bash
+   dart pub global activate flutterfire_cli
+   ```
+
+2. **Configure Firebase for your project:**
+   ```bash
+   flutterfire configure
+   ```
+   This will:
+   - Create a new Firebase project (or select existing one)
+   - Generate `firebase_options.dart`
+   - Download platform-specific configuration files
+   - Update your `pubspec.yaml` with required dependencies
+
+3. **Install dependencies:**
+   ```bash
+   flutter pub get
+   ```
+
+4. **Run the app:**
+   ```bash
+   flutter run
+   ```
+
+## 📱 Android Configuration
+
+The app includes proper Android configuration for:
+- Java 11 compatibility with desugaring
+- Notification permissions for Android 13+
+- Firebase notification channel setup
+- Custom notification icons
+
+## 🔧 Key Dependencies
+
+- `firebase_core` - Firebase core functionality
+- `firebase_messaging` - FCM integration
+- `flutter_local_notifications` - Local notifications
+- `permission_handler` - Runtime permissions
+- `device_info_plus` - Device information
+- `get` - State management and navigation
+
+## 📚 Resources
+
+- [FlutterFire Documentation](https://firebase.flutter.dev/)
+- [Firebase Console](https://console.firebase.google.com/)
+- [Flutter Notifications Guide](https://docs.flutter.dev/development/platform-integration/platform-channels)
+
+## 🤝 Contributing
+
+Feel free to contribute to this project by submitting issues or pull requests.
+
+## 📄 License
+
+This project is for demonstration purposes.
