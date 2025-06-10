@@ -1,6 +1,6 @@
 # notification_demo
 
-A Flutter application demonstrating Firebase push notifications implementation with proper Android & iOS configuration and permissions handling.
+A Flutter application demonstrating Firebase push notifications implementation with cross-platform support for both Android and iOS, including proper permissions handling and notification channel configuration.
 
 ## 🚀 Features
 
@@ -21,9 +21,14 @@ This project uses **FlutterFire CLI** for Firebase configuration. You'll need to
 
 This repository **does not include** the following Firebase configuration files (you need to generate these for your own project):
 
+**Common:**
 - `firebase.json`
 - `lib/firebase_options.dart`
+
+**Android:**
 - `android/app/google-services.json`
+
+**iOS:**
 - `ios/Runner/GoogleService-Info.plist`
 - `ios/Podfile.lock`
 
@@ -53,14 +58,6 @@ This repository **does not include** the following Firebase configuration files 
    ```bash
    flutter run
    ```
-
-## 📱 Android Configuration
-
-The app includes proper Android configuration for:
-- Java 11 compatibility with desugaring
-- Notification permissions for Android 13+
-- Firebase notification channel setup
-- Custom notification icons
 
 ## 🔧 Key Dependencies
 
